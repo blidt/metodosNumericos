@@ -1,24 +1,24 @@
 from math import *
  
 
-lInferior = 1.0
-lSuperior = 2.0
-tol = 0.01
-maxIter = 5
+lInferior = 0.1
+lSuperior = 1
+tol = 10**-15
+maxIter = 100
  
 def f(x):
-    return x**3 -2.0
+    return 230*x**4 +18*x**3 + 9*x**2 -221*x -9
  
 i = 0
 fa = f(lInferior)
 fb = f(lSuperior)
-
+ 
 while i <= maxIter:
     pMedio = (lInferior + lSuperior)/2
     fc = f(pMedio)
-    print ("La raiz buscada es: %.4f" %pMedio, "con " + str(i) + " iteraciones.")
-    if (fc == 0) or abs(fc) < tol:
-        
+ 
+    if (fc == 0.0) or abs(fc) < tol:
+        print "La raiz buscada es: %.4f" %pMedio, "con " + str(i) + " iteraciones."
         break
     
     i = i +1
