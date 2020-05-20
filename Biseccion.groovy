@@ -1,28 +1,39 @@
+import java.math.BigDecimal
+
 public strictfp class Biseccion {
 
     public static void main(String[] args) {
-        Double a
-        Double b
-        Double tolerancia
-        Double mitad
+        BigDecimal a
+        BigDecimal b
+        BigDecimal tolerancia
+        BigDecimal x
+        BigDecimal resultado = 1
         print "\nIngrese el valor de a: "
-        a = System.in.newReader().readLine() as Double
+        a = System.in.newReader().readLine() as BigDecimal
         print "\nIngrese el valor de b: "
-        b = System.in.newReader().readLine() as Double
+        b = System.in.newReader().readLine() as BigDecimal
         print "\nIngrese la tolerancia: "
-        b = System.in.newReader().readLine() as Double
+        tolerancia = System.in.newReader().readLine() as BigDecimal
 
-        mitad = (b-a)/2
-
-
-        if(numero < 0){
-            break
+        while((b-a)>tolerancia){
+            x = ((a+b)/2)
+            println "La mitad del intervalo está en " + x
+            resultado = funcion(x)
+            println "\nx_k= " + x
+            println "\na_k=  " + a
+            println "\nb_k=  " + b
+            println "\nf(x_k)=  " + resultado
+            if(funcion(a)*resultado<0){
+                b=x
+            }else{
+                a=x
+            }
         }
-        
+
     }
 
-    Double funcion(Double x){
-        250*((pow(1+(x/12)),36)/(x/12))
-    }    
-        
+    private static BigDecimal funcion(BigDecimal x){
+        250*((Math.pow((1 + (x/12)),36)-1)/(x/12)) + 13500*(Math.pow((1+(x/12)),36))-25000
+    }
+
 }

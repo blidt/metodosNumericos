@@ -1,31 +1,31 @@
 from math import *
  
 
-lInferior = -1.0
-lSuperior = 0.0
-tol = 0.01
-maxIter = 5
+a = float(input('Ingrese el valor a:'))
+b = float(input('Ingrese el valor b:'))
+tol = float(input('Ingrese la tolerancia:'))
+maxIter = 1000000
  
 def f(x):
-    return x+exp(-x)-1.5
+    return 250*(((1+(x/12))**36-1)/(x/12)) +13500*((1+(x/12)**36))-25000
  
 i = 1
-fa = f(lInferior)
-fb = f(lSuperior)
-print "Iteracion     a     b     c     f(c)"
+fa = f(a)
+fb = f(b)
+print ("Iteracion     a     b     c     f(c)")
 while i <= maxIter:
-    pMedio = (lInferior + lSuperior)/2
+    pMedio = (a + b)/2
     fc = f(pMedio)
-    print "%.4f" %i, "%.4f" %lInferior,"    %.4f" %lSuperior,"    %.4f" %pMedio, "    %.4f" %fc
-    if (fc == 0) or abs(fc) < tol:
-        print "La raiz buscada es: %.4f" %pMedio, "con " + str(i) + " iteraciones."
+    print( "%.7f" %i, "%.7f" %a,"    %.7f" %b,"    %.7f" %pMedio, "    %.7f" %fc)
+    if (fc == 0) or abs(b - a) < tol:
+        print ("La raiz buscada es: %.7f" %pMedio, "con " + str(i) + " iteraciones.")
         break
     
     i = i +1
     if (fa*fc > 0):
-        lInferior=pMedio
-        fa = f(lInferior)
+        a=pMedio
+        fa = f(a)
 
     else:
-        lSuperior = pMedio
-        fb = f(lSuperior)
+        b = pMedio
+        fb = f(b)
