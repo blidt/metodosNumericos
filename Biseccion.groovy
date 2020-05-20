@@ -1,10 +1,10 @@
-public strictfp class Bisección {
+public strictfp class Biseccion {
 
     public static void main(String[] args) {
-        Float a
-        FLoat b
-        Float tolerancia
-        Float mitad
+        Double a
+        Double b
+        Double tolerancia
+        Double mitad
         print "\nIngrese el valor de a: "
         a = System.in.newReader().readLine() as Double
         print "\nIngrese el valor de b: "
@@ -21,8 +21,8 @@ public strictfp class Bisección {
         
     }
 
-    Float funcion()
-    
+    Double funcion(Double x){
+        250*((pow(1+(x/12)),36)/(x/12))
     }    
         
 }
