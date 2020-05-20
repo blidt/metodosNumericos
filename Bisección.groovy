@@ -1,16 +1,27 @@
 public strictfp class Bisección {
 
     public static void main(String[] args) {
-        print "\nIngrese el numero: "
-        numero = System.in.newReader().readLine() as Double
+        Float a
+        FLoat b
+        Float tolerancia
+        Float mitad
+        print "\nIngrese el valor de a: "
+        a = System.in.newReader().readLine() as Double
+        print "\nIngrese el valor de b: "
+        b = System.in.newReader().readLine() as Double
+        print "\nIngrese la tolerancia: "
+        b = System.in.newReader().readLine() as Double
+
+        mitad = (b-a)/2
+
+
         if(numero < 0){
             break
         }
-        resultado =  Math.sqrt(Math.pow(numero,2))
-        print "El resultado es: " + resultado
-        resultado = Math.sqrt(Math.pow(numero,2)) - numero
-        print "\nEl resultado es: " + resultado
+        
     }
+
+    Float funcion()
     
     }    
         
