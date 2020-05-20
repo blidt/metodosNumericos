@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  18 MAY 2020 23:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  19 MAY 2020 21:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/angelcacereslicona/Developer/MétodosNumericos/Tarea3.tex
-(/Users/angelcacereslicona/Developer/MétodosNumericos/Tarea3.tex
+**/Users/angelcacereslicona/Developer/MétodosNumericos/Tarea3.tex
+(/Users/angelcacereslicona/Developer/MétodosNumericos/Tarea3.tex
 LaTeX2e <2018-12-01>
 (/usr/local/texlive/2019/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
@@ -421,7 +421,7 @@ LaTeX Font Info:    Redeclaring math accent \widehat on input line 944.
 LaTeX Font Info:    Redeclaring math accent \widetilde on input line 946.
 )) (/usr/local/texlive/2019/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/02/27 1.8b listings language file
-) (/Users/angelcacereslicona/Developer/MétodosNumericos/Tarea3.aux)
+) (/Users/angelcacereslicona/Developer/MétodosNumericos/Tarea3.aux)
 \openout1 = `Tarea3.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
@@ -529,7 +529,7 @@ Overfull \hbox (23.87721pt too wide) in paragraph at lines 99--111
 
 [1
 
-{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map} </Users/angelcacereslicona/Developer/MétodosNumericos/resultadoSumaTarea2.png>]
+{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map} </Users/angelcacereslicona/Developer/MétodosNumericos/resultadoSumaTarea2.png>]
 Overfull \hbox (9.04924pt too wide) in paragraph at lines 124--127
 \OT1/cmr/m/n/10 Para un valor ar-bi-trario de $\OML/cmm/m/it/10 A$\OT1/cmr/m/n/10 , en este caso 1 obtengo el sigu-iente valor: $3\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 9999\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 10[]$
  []
@@ -564,7 +564,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 142--152
 []
  []
 
-[2 </Users/angelcacereslicona/Developer/MétodosNumericos/SumaPequenos.png> </Users/angelcacereslicona/Developer/MétodosNumericos/SumaPequenos2.png>] [3 </Users/angelcacereslicona/Developer/MétodosNumericos/resultadosAlgoritmoSencilla.png>]
+[2 </Users/angelcacereslicona/Developer/MétodosNumericos/SumaPequenos.png> </Users/angelcacereslicona/Developer/MétodosNumericos/SumaPequenos2.png>] [3 </Users/angelcacereslicona/Developer/MétodosNumericos/resultadosAlgoritmoSencilla.png>]
 <resultadoAlgoritmoCuadradoSencilla.png, id=36, 244.915pt x 380.42125pt>
 File: resultadoAlgoritmoCuadradoSencilla.png Graphic file (type png)
 <use resultadoAlgoritmoCuadradoSencilla.png>
@@ -594,17 +594,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 153--162
 []
  []
 
-[4 </Users/angelcacereslicona/Developer/MétodosNumericos/resultadoAlgoritmoPrecisionDoble.png>] [5 </Users/angelcacereslicona/Developer/MétodosNumericos/resultadoAlgoritmoCuadradoSencilla.png>] [6] (/Users/angelcacereslicona/Developer/MétodosNumericos/Tarea3.aux) ) 
+[4 </Users/angelcacereslicona/Developer/MétodosNumericos/resultadoAlgoritmoPrecisionDoble.png>] [5 </Users/angelcacereslicona/Developer/MétodosNumericos/resultadoAlgoritmoCuadradoSencilla.png>] [6] (/Users/angelcacereslicona/Developer/MétodosNumericos/Tarea3.aux) ) 
 Here is how much of TeX's memory you used:
  5355 strings out of 492616
- 70893 string characters out of 6129482
+ 70902 string characters out of 6129482
  368523 words of memory out of 5000000
  9199 multiletter control sequences out of 15000+600000
  16741 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,8n,40p,327b,1171s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,8n,40p,328b,1171s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/mathabx-type1/matha10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/mathabx-type1/matha12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/mathabx-type1/matha7.pfb>
-Output written on /Users/angelcacereslicona/Developer/MétodosNumericos/Tarea3.pdf (6 pages, 218523 bytes).
+Output written on /Users/angelcacereslicona/Developer/MétodosNumericos/Tarea3.pdf (6 pages, 218528 bytes).
 PDF statistics:
  92 PDF objects out of 1000 (max. 8388607)
  57 compressed objects within 1 object stream
