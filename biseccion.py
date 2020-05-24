@@ -7,7 +7,7 @@ tol = float(input('Ingrese la tolerancia:'))
 maxIter = 1000000
  
 def f(x):
-    return 250*(((1+(x/12))**36-1)/(x/12)) +13500*((1+(x/12)**36))-25000
+    return -8*exp(1-x) + 7/x
  
 i = 1
 fa = f(a)

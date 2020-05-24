@@ -7,7 +7,7 @@ tol = 10**-15
 maxIter = 100
  
 def f(x):
-    return 230*x**4 +18*x**3 + 9*x**2 -221*x -9
+    return x**4 - 4*cos(x)
  
 i = 0
 fa = f(lInferior)
