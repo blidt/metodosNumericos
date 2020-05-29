@@ -101,9 +101,9 @@ def posicionfalsa(a,b,tol):
 posicionfalsa(1.0,2.0,0.0000000005)
 \end{lstlisting}
 
-\subsection{use el metodo para localizar una aproximaci{on y haga una tabla con los datos}
+\subsection{Use el metodo para localizar una aproximación y haga una tabla con los datos}
 \begin{center}
-    \begin{tabular}{||c c c c c c||} 
+    \begin{tabular}{||c c c c c c c||} 
     \hline
     $n$ & $a$ & $b$  & $c$ & $f(a)|$ & $f(b)$ & $f(c)$ \\ [0.5ex] 
     \hline\hline
@@ -120,7 +120,6 @@ posicionfalsa(1.0,2.0,0.0000000005)
     5 & 1.2015382978 & 1.1701206902  & 1.2015382994& -0.0000000092 &-0.1909797940 & -0.0000000092\\
     \hline
     6 & 1.2015382994   & 1.1701206902  & 1.2015382993 &  0.0000000001  & -0.1909797940 & 0.0000000001[1ex]
-    \hline
 
    \end{tabular}
 \end{center}
@@ -131,16 +130,16 @@ Para secante salieron 7 iteraciones.
 
 \section{Considere la función $-8e^{1-x}+\frac{7}{x}$}
 \subsection{Graficar en el intervalo $(0,2)$}
-\includegraphics[scale=0.4]{graficaFalsa1.png}
+\includegraphics[scale=0.4]{graficaFalsa2.png}
 
 \subsection{Hacer un programa que encuentre...}
 Usé el mismo programa, sólo cambié la condición de paro y salen estos resultados:
 
 \begin{center}
-    \begin{tabular}{||c c c c c c||} 
+    \begin{tabular}{||c c c c c c c||} 
     \hline
     $n$ & $a$ & $b$  & $c$ & $f(a)|$ & $f(b)$ & $f(c)$ \\ [0.5ex] 
-    \hline\hline
+    \hline\
     0 & 0.55 & 0.57 & 0.5682478058  & 0.1807752434 &  -0.0173584340 & -0.0010583244\\ 
     \hline
     1 & 0.5682478058 & 0.57  & 0.5681340403  & -0.0010583244 & -0.0173584340 &  -0.0010583244 \\
@@ -150,7 +149,6 @@ Usé el mismo programa, sólo cambié la condición de paro y salen estos result
     3 & 0.5681347676  & 0.57  & 0.5681347629 &  -0.0000000433 &  -0.0173584340 & -0.0000000433\\
     \hline
     4 & 0.5681347629 & 0.57  & 0.5681347630 & 0.0000000003 &  -0.0173584340  & 0.0000000003[1ex]
-    \hline
 
    \end{tabular}
 \end{center}
@@ -159,7 +157,7 @@ Para el método de biseccion tenemos 27 iteraciones.
 Para el método de secante tenemos 5 iteraciones.
 
 \begin{center}
-    \begin{tabular}{||c c c c c c||} 
+    \begin{tabular}{||c c c c c c c||} 
     \hline
     $n$ & $a$ & $b$  & $c$ & $f(a)|$ & $f(b)$ & $f(c)$ \\ [0.5ex] 
     \hline\hline
@@ -169,12 +167,12 @@ Para el método de secante tenemos 5 iteraciones.
     \hline
     2 & 1.6093729685 & 1.7  & 1.6093813066  & -0.0000133387 & 0.1449646285  &  -0.0000133387\\
     \hline
-    3 & 1.6093813066  & 1.7  & 1.6093810607 & 0.0000003935  &  0.1449646285  0.0000003935\\
+    3 & 1.6093813066  & 1.7  & 1.6093810607 & 0.0000003935  &  0.1449646285 & 0.0000003935\\
     \hline
     4 & 1.6093810607 & 1.7  & 1.6093810679 & -0.0000000116 &  0.1449646285  & -0.0000000116\\
     \hline
     5 & 1.6093810679 & 1.7  & 1.6093810677 & 0.0000000003 &  0.1449646285  & 0.0000000003[1ex]
-    \hline
+
    \end{tabular}
 \end{center}
 
