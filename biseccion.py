@@ -7,7 +7,7 @@ tol = float(input('Ingrese la tolerancia:'))
 maxIter = 1000000
  
 def f(x):
-    return -8*exp(1-x) + 7/x
+    return -8*exp(1-x)+7/x
  
 i = 1
 fa = f(a)
