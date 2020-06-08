@@ -2,7 +2,7 @@ from math import *
 
 
 def gx(x):
-    return (-exp(x)+x +4)/x
+    return x - (x**3 - 7)/(12)
 
 def puntofijo(a,tol, n = 20):
 
@@ -22,4 +22,4 @@ def puntofijo(a,tol, n = 20):
 
 
 # PROCEDIMIENTO
-respuesta = puntofijo(1,10**-25)
+respuesta = puntofijo(1.01,10**-5)

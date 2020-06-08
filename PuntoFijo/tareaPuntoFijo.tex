@@ -116,6 +116,7 @@ Iteramos y obtenemos lo siguiente:
     9 & 1.2886207127 \\ 
     \hline
     10 & 1.28870285824 \\ [1ex]
+    \hline
    \end{tabular}
 \end{center}
 
@@ -151,6 +152,7 @@ Iteramos y obtenemos lo siguiente
     9 & -0.993263918688 \\ 
     \hline
     10 & -2.65424944943 \\ [1ex]
+    \hline
    \end{tabular}
 \end{center}
 
@@ -183,8 +185,152 @@ def puntofijo(a,tol, n = 20):
 respuesta = puntofijo(-0.74,10**-25)
 \end{lstlisting}
 
-\subsection{Repetir el ejercicio con $x^3-x^2-10x+7$}
+\section{Repetir el ejercicio con $x^3-x^2-10x+7$}
 Primero graficamos en el intervalo $(0,1)$
-\includegraphics[scale=0.75]{grafica2.png}
+\begin{center}
+    \includegraphics[scale=0.75]{grafica2.png}
+\end{center}
+Probamos la primer $g(x)= \frac{x^3-x^2+7}{10}$ y obtenemos
+\begin{center}
+    \begin{tabular}{||c c||} 
+    \hline
+    $n$ & $g(x)$\\ [0.5ex] 
+    \hline
+    1 & 0.6991 \\
+    \hline
+    2 & 0.685293789027 \\
+    \hline
+    3 & 0.685220528459 \\ [1ex]
+    \hline
+   \end{tabular}
+\end{center}
+que convergió rápido.
+
+Probamos la segunda $g(x)= \frac{x^3-10x+7}{x}$ y obtenemos
+\begin{center}
+    \begin{tabular}{||c c||} 
+    \hline
+    $n$ & $g(x)$\\ [0.5ex] 
+    \hline
+    1 & 60.01 \\
+    \hline
+    2 & 3591.31674723 \\
+    \hline
+    3 & 12897545.9809 \\ 
+    \hline
+    2 & 1.66346692328e+14 \\
+    \hline
+    2 & 2.76712220485e+28 \\
+    \hline
+    2 & 7.65696529659e+56 \\
+    \hline
+    2 & 5.86291175531e+113 \\ [1ex]
+    \hline
+   \end{tabular}
+\end{center}
+que no converge.
+
+Probamos con una tercera $g(x) = \sqrt{x^3-10x+7}$ y obtenemos que el programa truena por intentar calcular una raíz de un numero negativo.
+
+\section{Repetir el ejercicio con $f(x) = 1.05 - 1.04x +\log(x)$}
+Primero graficamos en el intervalo $(1,2)$
+\begin{center}
+    \includegraphics[scale=0.75]{grafica3.png}
+\end{center}
+
+Probamos la primer $g(x)= \frac{1.05 + \log(x)}{1.04}$ y obtenemos
+
+\begin{center}
+    \begin{tabular}{||c c||} 
+    \hline
+    $n$ & $g(x)$\\ [0.5ex] 
+    \hline
+    1 & 1.00961538462 \\
+    \hline
+    2 & 1.01881677982 \\
+    \hline
+    3 & 1.02754032132 \\ 
+    \hline
+    2 & 1.03573837382 \\
+    \hline
+    2 & 1.04337940099 \\
+    \hline
+    2 & 1.05044698962 \\
+    \hline
+    2 & 1.05693824807 \\ [1ex]
+    \hline
+   \end{tabular}
+\end{center}
+
+que converge lentamente.
+Probamos una segunda $g(x) = e^{-1.05 + 1.04x}$ y obtenemos lo siguiente:
+
+\begin{center}
+    \begin{tabular}{||c c||} 
+    \hline
+    $n$ & $g(x)$\\ [0.5ex] 
+    \hline
+    1 & 0.990049833749 \\
+    \hline
+    2 & 0.979857454096 \\
+    \hline
+    3 & 0.969525746926 \\ 
+    \hline
+    2 & 0.959163984704 \\
+    \hline
+    2 & 0.948883303392 \\
+    \hline
+    2 & 0.938791973795 \\
+    \hline
+    2 & 0.928990889263 \\ [1ex]
+    \hline
+   \end{tabular}
+\end{center}
+que tampoco converge
+
+\section{Clasifique las funciones por rapidez de convergencia...}
+\begin{center}
+    \begin{tabular}{||c c c c c||} 
+    \hline
+    $n$ & $g_1(x)$ & $g_2(x)$ & $g_3(x)$ & $g_4(x)$ \\ [0.5ex] 
+    \hline
+    1 & 2.64575131106 & diverge rápido  & 2.1573526803 & 1.50747491667 \\
+    \hline 
+    2 & 2.31392495318 & . & 2.12927784776 & 1.80533262168 \\
+    \hline 
+    3 & 2.085113115356 & . & 2.10345737732 & 1.89833372223 \\ 
+    \hline 
+    4 & 1.96790027706 & . & 2.05854241047 & 1.91158621947 \\
+    \hline 
+    5 & 1.92672978417& . & 2.03934932642 & 1.91281576256 \\
+    \hline 
+    6 & 1.9160343453 & . & 2.02221852111 & 1.91292134565 \\
+    \hline 
+    7 & 1.9136073772 & . & 2.0070346352 & . \\ 
+    \hline
+    8 & 1.91307744943 & . & 1.99366482238 & . \\
+    \hline 
+    9 & 1.91296277044 & . & 1.98196454838 & .\\
+    \hline 
+    10 & 1.91293800204 & . & 1.9717832322 & .\\
+    \hline 
+    11 & . & . & 1.9629693429 & .\\
+    \hline 
+    12 & . & . & 1.95537469059 & .\\
+    \hline 
+    13 & . & . & 1.94885778226 & .\\
+    \hline 
+    14 & . & . & 1.94328622775 & .\\
+    \hline 
+    15 & . & . & 1.93853826786 & .\\
+    \hline 
+    16 & . & . & 1.9345035497 & .\\
+    \hline 
+    17 & . & . & 1.93108329847 & .\\ [1ex]
+    \hline 
+   \end{tabular}
+\end{center}
+
+Entonces vemos que la que converge mas rápido es $g(x) = x- \frac{x^3 - 7}{12}$
 
 \end{document}
