@@ -1,0 +1,190 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{textcomp}
+\usepackage{amsmath}
+\usepackage{mathabx}
+
+\definecolor{solarized@base03}{HTML}{002B36}
+\definecolor{solarized@base02}{HTML}{073642}
+\definecolor{solarized@base01}{HTML}{586e75}
+\definecolor{solarized@base00}{HTML}{657b83}
+\definecolor{solarized@base0}{HTML}{839496}
+\definecolor{solarized@base1}{HTML}{93a1a1}
+\definecolor{solarized@base2}{HTML}{EEE8D5}
+\definecolor{solarized@base3}{HTML}{FDF6E3}
+\definecolor{solarized@yellow}{HTML}{B58900}
+\definecolor{solarized@orange}{HTML}{CB4B16}
+\definecolor{solarized@red}{HTML}{DC322F}
+\definecolor{solarized@magenta}{HTML}{D33682}
+\definecolor{solarized@violet}{HTML}{6C71C4}
+\definecolor{solarized@blue}{HTML}{268BD2}
+\definecolor{solarized@cyan}{HTML}{2AA198}
+\definecolor{solarized@green}{HTML}{859900}
+
+\lstset{
+  language=Python,
+  upquote=true,
+  columns=fixed,
+  tabsize=2,
+  extendedchars=true,
+  breaklines=true,
+  frame=single,
+  numbers=left,
+  numbersep=5pt,
+  rulesepcolor=\color{solarized@base03},
+  numberstyle=\tiny\color{solarized@base01},
+  basicstyle=\footnotesize\ttfamily,
+  keywordstyle=\color{solarized@green},
+  stringstyle=\color{solarized@cyan}\ttfamily,
+  identifierstyle=\color{solarized@blue},
+  commentstyle=\color{solarized@base01},
+  emphstyle=\color{solarized@red}
+}
+\begin{document}
+
+\title{Tarea Método de Punto Fijo}
+\author{Angel Caceres Licona}
+
+\maketitle
+
+\section{Considerar la función $e^x+x^2-x-4$...}
+\subsection{Construya tresdiferentes funciones de iteracion.}
+Consideremos primero $g(x)=e^x+x^2-4$
+
+Gráfica de la primer $g(x)$
+
+\includegraphics[scale=0.4]{grafica1ergx.png}
+
+La derivada de esta función es:
+
+$g'(x) = -e^x-2x$ 
+y tenemos que
+$|g'(x)| < 1$ para $x \in (-0.74, 0)$
+
+Al hacer las iteraciones obtenemos lo siguiente:
+
+\begin{center}
+    \begin{tabular}{||c c||} 
+    \hline
+    $n$ & $g(x)$\\ [0.5ex] 
+    \hline
+    1 & -0.281718171541 \\
+    \hline
+    2 & -3.16614858154 \\
+    \hline
+    3 & 6.06666252367 \\
+    \hline
+    4 & 464.043421299 \\ 
+    \hline
+    5 & 3.40014339901e+201 \\ [1ex]
+    \hline
+
+   \end{tabular}
+\end{center}
+Que no converge a la raíz buscada.
+
+Probamos con una segunda $g(x) = \log( -x^2 + x +4)$
+Su derivada es $g'(x)\frac{1-2x}{-x^2+x+4}$
+Y tenemos que $|g'(x)|<1$ no tiene soluciones reales.
+Iteramos y obtenemos lo siguiente:
+
+\begin{center}
+    \begin{tabular}{||c c||} 
+    \hline
+    $n$ & $g(x)$\\ [0.5ex] 
+    \hline
+    1 & 1.38629436112 \\
+    \hline
+    2 & 1.24256321468 \\
+    \hline
+    3 & 1.30795433512 \\
+    \hline
+    4 & 1.28015848727 \\ 
+    \hline
+    5 & 1.29235524303 \\
+    \hline
+    6 & 1.2870741686 \\
+    \hline
+    7 & 1.28837503694 \\
+    \hline
+    8 & 1.28880963902\\
+    \hline
+    9 & 1.2886207127 \\ 
+    \hline
+    10 & 1.28870285824 \\ [1ex]
+   \end{tabular}
+\end{center}
+
+Que parece estar convergiendo muy lentamente.
+
+Escogemos una tercera $g(x)= \frac{-e^x+x+4}{x}$
+Tenemos que $g'(x) = - \frac{e^x(x-1)+4}{x^2}$
+y que $|g'(x)|<1 x \in (-1.88751, 0)$
+
+Iteramos y obtenemos lo siguiente
+
+\begin{center}
+    \begin{tabular}{||c c||} 
+    \hline
+    $n$ & $g(x)$\\ [0.5ex] 
+    \hline
+    1 & 2.28171817154  \\
+    \hline
+    2 & -1.53909222227 \\
+    \hline
+    3 & -1.45951746429 \\
+    \hline
+    4 & -1.58143648714 \\ 
+    \hline
+    5 & -1.39928735729 \\
+    \hline
+    6 & -1.68224194147 \\
+    \hline
+    7 & -1.26723832134 \\
+    \hline
+    8 & -1.93424818125\\
+    \hline
+    9 & -0.993263918688 \\ 
+    \hline
+    10 & -2.65424944943 \\ [1ex]
+   \end{tabular}
+\end{center}
+
+que tampoco converge.
+
+\section{Código del programa}
+
+\begin{lstlisting}
+from math import *
+
+
+def gx(x):
+    return -exp(x) -x**2 +4
+
+def puntofijo(a,tol, n = 20):
+
+    i = 1
+    b = gx(a)
+    tramo = abs(b-a)
+    while(tramo>=tol and i<=n):
+        print "El punto fijo es ",b," despues de ",i," iteraciones"
+        a = b
+        b = gx(a)
+        tramo = abs(b-a)
+        i = i+1
+    respuesta = b
+
+    return(respuesta)
+
+respuesta = puntofijo(-0.74,10**-25)
+\end{lstlisting}
+
+\subsection{Repetir el ejercicio con $x^3-x^2-10x+7$}
+Primero graficamos en el intervalo $(0,1)$
+\includegraphics[scale=0.75]{grafica2.png}
+
+\end{document}

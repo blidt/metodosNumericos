@@ -1,34 +1,21 @@
-from math import *
-from decimal import Decimal, localcontext
+from  __future__  import division
+from  scipy       import *
+from  matplotlib.pyplot import *
 
-def gx(x):
-    with localcontext() as ctx:
-        ctx.prec = 100
-        respuesta = Decimal(0) 
-        respuesta = (x**3 -1.2)/(0.9)
-    return respuesta
-
-def puntofijo(a,tol, n = 15):
-
-    i = 1
-    b = gx(a)
-    tramo = abs(b-a)
-    while(tramo>=tol and i<=n):
-        a = b
-        b = gx(a)
-        tramo = abs(b-a)
-        i = i+1
-    respuesta = b
-
-    return(respuesta)
-
-
-a = 0 ; b = 1
-tol = 0.001
-tramos = 101
-
-# PROCEDIMIENTO
-respuesta = puntofijo(1.5,10**-2)
-
-# SALIDA
-print(respuesta)
+def f(g,x0):
+    for n in range(1,100):
+        x1=g(x0)
+        if abs(x1-x0)<10**(-1):
+            print(x1)
+            
+            break
+        else:
+            x0=x1
+            print "Iteraciones: ",str(n),"Valor aproximado: ", str(x1)
+    return x1
+    
+def ga(x):
+    return (1.52)/(x**2-0.9)
+   
+y=f(ga,1)
+print "Valor aproximado: ", str(y)
