@@ -1,7 +1,7 @@
 from math import *
 
 def fx(x):
-    respuesta = -8*exp(1-x)+7/x
+    respuesta = (1 + 85.6409/(sqrt(450)*x *(x + 0.2590273)))*(x - 0.2590273) - (0.08206*450)
     return respuesta
 
 
@@ -30,4 +30,4 @@ def secante(a,b,tol):
 
     print ("La raiz buscada es: %.12f" %c, "con " + str(i) + " iteraciones.")
 
-secante(1.6, 1.7, 0.0000000005)
+secante(30, 40, 0.000000005)
